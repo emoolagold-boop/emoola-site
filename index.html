@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="EMOOLA LTD — Financial Data Services &amp; Market Intelligence. Satellite-resilient market data delivery and financial intelligence for petroleum, energy, and commodity markets.">
-    <meta name="keywords" content="financial data services, petroleum trading, energy markets, satellite payment processing, maritime, market intelligence, PFX Markets">
+    <meta name="description" content="EMOOLA LTD — Financial Data Services &amp; Market Intelligence. Professional financial data services and market intelligence solutions for institutional clients across petroleum, energy, and commodity markets.">
+    <meta name="keywords" content="financial data services, market intelligence, petroleum data, energy markets, commodity data, franchise node, institutional data">
     <title>EMOOLA LTD — Financial Data Services &amp; Market Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +30,6 @@
 
         ::selection { background: #C5A059; color: #060609; }
         
-        /* Header */
         header {
             background: rgba(8, 8, 12, 0.95);
             border-bottom: 1px solid rgba(197, 160, 89, 0.35);
@@ -104,7 +102,6 @@
 
         .header-nav a:hover { color: #C5A059; }
         
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
             padding: 100px 20px 90px;
@@ -179,7 +176,6 @@
             50% { opacity: 1; box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15); }
         }
         
-        /* Product Section */
         .product {
             padding: 90px 20px;
             background: #000000;
@@ -278,7 +274,7 @@
         }
 
         .feature-card:hover .feature-detail {
-            max-height: 150px;
+            max-height: 80px;
             opacity: 1;
             margin-top: 12px;
         }
@@ -318,7 +314,6 @@
             padding-top: 12px;
         }
         
-        /* Contact Section */
         .contact {
             padding: 70px 20px;
             background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
@@ -379,7 +374,6 @@
             color: #D4AF37;
         }
         
-        /* Corporate / Legal Section */
         .legal {
             background: #0e0e0e;
             padding: 70px 20px;
@@ -445,7 +439,37 @@
             border-color: #C5A059;
         }
 
-        /* Satellite Entry Point */
+        /* Sectors Grid */
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .sector-item {
+            background: rgba(197,160,89,0.04);
+            border: 1px solid rgba(197,160,89,0.1);
+            border-radius: 6px;
+            padding: 10px 8px;
+            text-align: center;
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+        }
+
+        .sector-item:hover {
+            background: rgba(197,160,89,0.08);
+            border-color: rgba(197,160,89,0.2);
+        }
+
+        .sector-item.active {
+            background: rgba(197,160,89,0.08);
+            border: 1px solid rgba(197,160,89,0.2);
+            color: #C5A059;
+            font-weight: 600;
+        }
+
         .sat-entry {
             padding: 70px 20px;
             display: flex;
@@ -502,8 +526,7 @@
             transition: border-color 0.6s ease;
         }
 
-        .sat-ring-outer {
-        .sat-ring-outer { opacity: 0.7; }
+        .sat-trigger:hover .sat-ring-outer {
             border-color: rgba(197, 160, 89, 0.2);
         }
 
@@ -527,7 +550,6 @@
             transition: opacity 0.5s;
         }
 
-        .sat-dot { opacity: 1; box-shadow: 0 0 14px rgba(197, 160, 89, 0.6); }
         .sat-trigger:hover .sat-dot { opacity: 1; box-shadow: 0 0 14px rgba(197, 160, 89, 0.6); }
 
         .sat-orbit-2 {
@@ -549,7 +571,6 @@
             box-shadow: 0 0 6px rgba(197, 160, 89, 0.3);
             transition: opacity 0.5s;
         }
-        .sat-dot-2 { opacity: 0.7; }
 
         .sat-trigger:hover .sat-dot-2 { opacity: 0.7; }
 
@@ -566,14 +587,10 @@
             text-transform: uppercase;
             opacity: 0;
             transition: opacity 0.4s ease;
-            animation: delayedFadeIn 0.6s ease 1.5s forwards;
         }
-        @keyframes delayedFadeIn { to { opacity: 0.6; } }
-        
-        .sat-entry:hover .sat-hint { opacity: 1; }
+
         .sat-entry:hover .sat-hint { opacity: 1; }
 
-        /* Satellite Overlay */
         .sat-overlay {
             position: fixed;
             inset: 0;
@@ -631,7 +648,6 @@
             outline-offset: 2px;
         }
         
-        /* Footer */
         footer {
             background: #000000;
             padding: 40px 20px;
@@ -673,7 +689,6 @@
             color: #555;
         }
 
-        /* Scroll Reveal */
         .reveal {
             opacity: 0;
             transform: translateY(16px);
@@ -685,7 +700,6 @@
             transform: translateY(0);
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 28px;
@@ -714,6 +728,10 @@
             
             .feature-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .sectors-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .contact-bar {
@@ -770,7 +788,7 @@
             </div>
             <nav class="header-nav">
                 <a href="#product">Product</a>
-                
+                <a href="#model">Model</a>
                 <a href="https://emoola.net/privacy.html">Privacy</a>
             </nav>
         </div>
@@ -779,8 +797,8 @@
     <section class="hero reveal">
         <div class="hero-content">
             <h1>Building the Future of Financial Data</h1>
-            <div class="hero-oneliner">Market data and financial intelligence for institutional clients across<br>petroleum, energy &amp; commodity markets</div>
-            <p>Developing professional financial data services, market intelligence solutions for institutional clients operating in petroleum, energy, and commodity markets.</p>
+            <div class="hero-oneliner">Market data and financial intelligence for institutional clients across petroleum, energy, and commodity markets</div>
+            <p>Developing professional financial data services and market intelligence solutions for institutional clients operating in petroleum, energy, and commodity markets.</p>
             <span class="status-badge">
                 <span class="status-badge-dot"></span>
                 ACTIVE DEVELOPMENT
@@ -826,9 +844,92 @@
             </div>
         </div>
     </section>
+
+    <!-- The EMOOLA Model -->
+    <section class="legal reveal" id="model">
+        <div class="legal-content">
+            <h2 class="section-title">The EMOOLA Model</h2>
+            <p class="section-subtitle">A New Approach to Financial Data Services</p>
+
+            <div class="legal-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto;">
+                <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                    <div class="legal-title">The Opportunity</div>
+                    <div class="legal-text" style="line-height: 1.8;">
+                        The global financial data services market exceeds $300 billion annually. It is dominated 
+                        by a small number of established providers who built their positions over decades through 
+                        large-scale employment and proprietary infrastructure. EMOOLA is entering this market with 
+                        a fundamentally different operating model.
+                    </div>
+                </div>
+
+                <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                    <div class="legal-title">Franchise Node Structure</div>
+                    <div class="legal-text" style="line-height: 1.8;">
+                        Each sector of the financial data industry is covered by a dedicated EMOOLA node company, 
+                        headed by an expert director recruited from a senior position within the industry. The 
+                        director holds 51% ownership and operational control. EMOOLA retains 49% and provides the 
+                        central AI-accelerated platform, brand licensing, compliance framework, and operational 
+                        infrastructure. This model attracts top-tier talent by offering ownership rather than 
+                        employment &mdash; and scales without the capital burden of traditional hiring.
+                    </div>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 40px auto 0;">
+                <p style="font-size: 13px; color: #C5A059; text-align: center; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px;">
+                    20 Specialist Sectors
+                </p>
+                <div class="sectors-grid">
+                    <div class="sector-item">ESG &amp; Sustainability</div>
+                    <div class="sector-item">Risk &amp; Compliance</div>
+                    <div class="sector-item active">Commodity &amp; Energy Pricing</div>
+                    <div class="sector-item">Index Creation</div>
+                    <div class="sector-item">Credit &amp; Risk Analytics</div>
+                    <div class="sector-item">Entity &amp; Reference Data</div>
+                    <div class="sector-item">Market Data &amp; Pricing</div>
+                    <div class="sector-item">Alternative Data</div>
+                    <div class="sector-item">Economic &amp; Macro Data</div>
+                    <div class="sector-item">Private Company Intelligence</div>
+                    <div class="sector-item">Real Estate &amp; Property</div>
+                    <div class="sector-item">Fixed Income &amp; Bonds</div>
+                    <div class="sector-item">FX &amp; Currency</div>
+                    <div class="sector-item">Financial News &amp; Research</div>
+                    <div class="sector-item">Wealth &amp; Advisory</div>
+                    <div class="sector-item">Regulatory &amp; Legal</div>
+                    <div class="sector-item">Insurance</div>
+                    <div class="sector-item">Trade Finance</div>
+                    <div class="sector-item">Payments &amp; Transactions</div>
+                    <div class="sector-item">Tax &amp; Accounting</div>
+                </div>
+            </div>
+
+            <div style="max-width: 900px; margin: 30px auto 0;">
+                <div class="legal-grid" style="grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">Portfolio Model</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            Each sector represents a standalone node company generating recurring 
+                            subscription revenue. EMOOLA's 49% stake across all active nodes creates 
+                            a diversified portfolio of specialist financial data businesses.
+                        </div>
+                    </div>
+
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">First Node</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            EMOOLA's initial node covers Commodity &amp; Energy Pricing &mdash; specifically 
+                            petroleum and energy market data. This sector aligns directly with our existing 
+                            corporate infrastructure, investor relationships, and complementary settlement 
+                            partners operating in international commodity markets.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     
-    
-    
+    <!-- Corporate Information -->
     <section class="legal reveal">
         <div class="legal-content">
             <h2 class="section-title">Corporate Information</h2>
@@ -846,16 +947,20 @@
                 <div class="legal-section">
                     <div class="legal-title">Technology Focus</div>
                     <div class="legal-text">
-                        Purpose-built infrastructure combining satellite-resilient connectivity,
-                        real-time data processing, and secure architecture
-                        to deliver reliable financial data services across petroleum, energy, and maritime operating environments.
+                        Purpose-built infrastructure combining satellite-resilient connectivity, 
+                        real-time data processing, and secure architecture 
+                        to deliver reliable financial data services 
+                        across petroleum, energy, and maritime operating environments.
                     </div>
                 </div>
                 
                 <div class="legal-section">
                     <div class="legal-title">Development Status</div>
                     <div class="legal-text">
-                        PFX MARKETS is in active development. Institutional partner and qualified investor enquiries welcome via info@emoola.net.
+                        PFX MARKETS is in active development. Institutional partner 
+                        and qualified investor enquiries welcome via 
+                        <a href="mailto:info@emoola.net">info@emoola.net</a>.
+                    </div>
                 </div>
             </div>
         </div>
@@ -908,7 +1013,6 @@
     (function() {
         'use strict';
 
-        /* Scroll reveal */
         var els = document.querySelectorAll('.reveal');
         var obs = new IntersectionObserver(function(entries) {
             entries.forEach(function(e) {
@@ -917,7 +1021,6 @@
         }, { threshold: 0.08 });
         els.forEach(function(el) { obs.observe(el); });
 
-        /* Satellite overlay */
         var overlay = document.getElementById('satOverlay');
         var trigger = document.getElementById('satTrigger');
         var closeBtn = document.getElementById('satClose');
@@ -925,7 +1028,6 @@
         var appUrl = 'https://emoola.vercel.app/';
         var isOpen = false;
 
-        /* Mini globe teaser canvas */
         var miniCanvas = document.getElementById('miniGlobe');
         var mctx = miniCanvas ? miniCanvas.getContext('2d') : null;
         var miniTime = 0;
@@ -947,7 +1049,6 @@
         resizeMini();
         window.addEventListener('resize', resizeMini);
 
-        // Seeded land points for mini globe
         var miniLandPts = [];
         var miniRegions = [
             {latMin:25,latMax:65,lngMin:-120,lngMax:-65,n:25},
@@ -987,14 +1088,12 @@
                 return{x:mcx+x1,y:mcy-y1,z:z2,v:z2>0};
             }
 
-            // Globe outline
             mctx.beginPath();
             mctx.arc(mcx,mcy,r,0,Math.PI*2);
             mctx.strokeStyle='rgba(197,160,89,'+(0.04*ha)+')';
             mctx.lineWidth=0.5;
             mctx.stroke();
 
-            // Meridians
             for(var lng=-180;lng<180;lng+=40){
                 mctx.beginPath();
                 var started=false;
@@ -1008,7 +1107,6 @@
                 mctx.stroke();
             }
 
-            // Parallels
             for(var lat2=-60;lat2<=60;lat2+=30){
                 mctx.beginPath();
                 var started2=false;
@@ -1022,7 +1120,6 @@
                 mctx.stroke();
             }
 
-            // Land dots
             for(var li=0;li<miniLandPts.length;li++){
                 var lp=proj(miniLandPts[li].lat,miniLandPts[li].lng);
                 if(!lp.v) continue;
@@ -1031,7 +1128,6 @@
                 mctx.fillRect(lp.x-0.6,lp.y-0.6,1.2,1.2);
             }
 
-            // Hover glow
             if(miniHover){
                 var grd=mctx.createRadialGradient(mcx,mcy,0,mcx,mcy,r);
                 grd.addColorStop(0,'rgba(197,160,89,0.03)');
@@ -1073,7 +1169,7 @@
             if (e.key === 'Escape' && isOpen) closeSat();
         });
 
-       if (overlay) {
+        if (overlay) {
             overlay.addEventListener('click', function(e) {
                 if (e.target === overlay) closeSat();
             });
@@ -1083,6 +1179,6 @@
             if (e.data === 'closeOverlay') closeSat();
         });
     })();
-    </script><!-- Updated to force rebuild -->
-
-Wed 25 Mar 17:23:50 GMT 2026
+    </script>
+</body>
+</html>

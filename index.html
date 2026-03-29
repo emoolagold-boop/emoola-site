@@ -6,6 +6,12 @@
     <meta name="description" content="EMOOLA LTD — Financial Data Services &amp; Market Intelligence. Professional financial data services and market intelligence solutions for institutional clients across petroleum, energy, and commodity markets.">
     <meta name="keywords" content="financial data services, market intelligence, petroleum data, energy markets, commodity data, franchise node, institutional data">
     <title>EMOOLA LTD — Financial Data Services &amp; Market Intelligence</title>
+
+    <!-- FIX 1: Favicon — inline SVG data URI, no external file needed -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23C5A059'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23000000'%3EE%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23C5A059'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23000000'%3EE%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -257,6 +263,7 @@
             margin-top: 40px;
         }
         
+        /* FIX 2: Cards — ensure text never overflows the card box */
         .feature-card {
             background: #000000;
             border: 1px solid #2a2a2a;
@@ -264,6 +271,9 @@
             padding: 30px;
             transition: all 0.3s ease;
             cursor: default;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* prevent any child bleeding outside */
         }
         
         .feature-card:hover {
@@ -274,7 +284,7 @@
         }
 
         .feature-card:hover .feature-detail {
-            max-height: 80px;
+            max-height: 120px; /* slightly more room for longer detail text */
             opacity: 1;
             margin-top: 12px;
         }
@@ -282,6 +292,7 @@
         .feature-icon {
             font-size: 40px;
             margin-bottom: 15px;
+            flex-shrink: 0;
         }
         
         .feature-title {
@@ -289,12 +300,16 @@
             color: #C5A059;
             margin-bottom: 10px;
             font-weight: 600;
+            flex-shrink: 0;
         }
         
+        /* FIX 2 continued: feature-text allowed to wrap fully inside card */
         .feature-text {
             font-size: 14px;
             color: #888;
-            line-height: 1.6;
+            line-height: 1.7;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .feature-detail {
@@ -307,6 +322,8 @@
             transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
             border-top: 1px solid transparent;
             padding-top: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
 
         .feature-card:hover .feature-detail {
@@ -468,6 +485,13 @@
             border: 1px solid rgba(197,160,89,0.2);
             color: #C5A059;
             font-weight: 600;
+        }
+
+        /* FIX 3: Portfolio Model & First Node cards — stack vertically on mobile portrait */
+        .model-cards-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
 
         .sat-entry {
@@ -742,6 +766,11 @@
                 top: 12px;
                 right: 12px;
             }
+
+            /* FIX 3: Stack Portfolio Model & First Node cards vertically on portrait mobile */
+            .model-cards-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .footer-contact {
@@ -903,8 +932,9 @@
                 </div>
             </div>
 
+            <!-- FIX 3: Using .model-cards-grid class instead of inline grid-template-columns -->
             <div style="max-width: 900px; margin: 30px auto 0;">
-                <div class="legal-grid" style="grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div class="model-cards-grid">
                     <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
                         <div class="legal-title">Portfolio Model</div>
                         <div class="legal-text" style="line-height: 1.8;">

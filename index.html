@@ -7,7 +7,6 @@
     <meta name="keywords" content="financial data services, market intelligence, petroleum data, energy markets, commodity data, franchise node, institutional data">
     <title>EMOOLA LTD — Financial Data Services &amp; Market Intelligence</title>
 
-    <!-- FIX 1: Favicon — inline SVG data URI, no external file needed -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23C5A059'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23000000'%3EE%3C/text%3E%3C/svg%3E">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.svg">
     <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23C5A059'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='%23000000'%3EE%3C/text%3E%3C/svg%3E">
@@ -16,658 +15,118 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #060609;
-            color: #d8d4cc;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background: #060609; color: #d8d4cc; line-height: 1.6;
+            min-height: 100vh; display: flex; flex-direction: column;
+            -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
         }
-
         ::selection { background: #C5A059; color: #060609; }
-        
         header {
             background: rgba(8, 8, 12, 0.95);
             border-bottom: 1px solid rgba(197, 160, 89, 0.35);
-            padding: 28px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            padding: 28px 20px; position: sticky; top: 0; z-index: 100;
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
         }
-        
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
+        .header-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .logo-section { display: flex; align-items: center; gap: 15px; }
         .logo {
-            width: 50px;
-            height: 50px;
+            width: 50px; height: 50px;
             background: linear-gradient(135deg, #C5A059 0%, #D4AF37 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: #000000;
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 24px; font-weight: bold; color: #000000;
             box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
         }
-        
-        .company-name {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 26px;
-            font-weight: 700;
-            color: #C5A059;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-        }
-        
-        .tagline {
-            font-size: 12px;
-            color: rgba(197, 160, 89, 0.45);
-            margin-top: 4px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        .header-nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        .header-nav a {
-            font-size: 13px;
-            color: #888;
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease;
-        }
-
+        .company-name { font-family: 'DM Sans', sans-serif; font-size: 26px; font-weight: 700; color: #C5A059; letter-spacing: 3px; text-transform: uppercase; }
+        .tagline { font-size: 12px; color: rgba(197, 160, 89, 0.45); margin-top: 4px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 400; }
+        .header-nav { display: flex; gap: 28px; }
+        .header-nav a { font-size: 13px; color: #888; text-decoration: none; letter-spacing: 0.5px; transition: color 0.3s ease; }
         .header-nav a:hover { color: #C5A059; }
-        
         .hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-            padding: 100px 20px 90px;
-            text-align: center;
-            border-bottom: 1px solid #2a2a2a;
-            position: relative;
+            padding: 100px 20px 90px; text-align: center;
+            border-bottom: 1px solid #2a2a2a; position: relative;
         }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
+        .hero-content { max-width: 900px; margin: 0 auto; }
         .hero h1 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 52px;
-            color: #C5A059;
-            margin-bottom: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            line-height: 1.15;
-            white-space: nowrap;
+            font-size: 52px; color: #C5A059; margin-bottom: 28px;
+            font-weight: 600; letter-spacing: 1px; line-height: 1.15; white-space: nowrap;
         }
-
         .hero-oneliner {
-            font-size: 13px;
-            color: #C5A059;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 32px;
-            font-weight: 500;
-            padding: 12px 0;
+            font-size: 13px; color: #C5A059; letter-spacing: 3px; text-transform: uppercase;
+            margin-bottom: 32px; font-weight: 500; padding: 12px 0;
             border-top: 1px solid rgba(197, 160, 89, 0.1);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.1);
-            display: inline-block;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.1); display: inline-block;
         }
-        
-        .hero p {
-            font-size: 18px;
-            color: #b0b0b0;
-            margin-bottom: 44px;
-            line-height: 1.9;
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(197, 160, 89, 0.1);
-            border: 1px solid #C5A059;
-            color: #C5A059;
-            padding: 10px 28px;
-            border-radius: 25px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-
-        .status-badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #C5A059;
-            animation: status-pulse 2.5s ease-in-out infinite;
-        }
-
-        @keyframes status-pulse {
-            0%, 100% { opacity: 0.3; box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
-            50% { opacity: 1; box-shadow: 0 0 0 4px rgba(197, 160, 89, 0.15); }
-        }
-        
-        .product {
-            padding: 90px 20px;
-            background: #000000;
-            position: relative;
-        }
-
-        .product::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent);
-        }
-        
-        .product-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 34px;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-        
-        .section-subtitle {
-            font-size: 14px;
-            color: #888;
-            text-align: center;
-            margin-bottom: 60px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-        
-        .product-showcase {
-            background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%);
-            border: 1px solid #2a2a2a;
-            border-radius: 12px;
-            padding: 50px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .product-showcase::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #C5A059, #D4AF37);
-        }
-        
-        .product-name {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 28px;
-            color: #C5A059;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: 4px;
-        }
-        
-        .product-description {
-            font-size: 17px;
-            color: #b0b0b0;
-            line-height: 1.9;
-            margin-bottom: 30px;
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        /* FIX 2: Cards — ensure text never overflows the card box */
-        .feature-card {
-            background: #000000;
-            border: 1px solid #2a2a2a;
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
-            cursor: default;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden; /* prevent any child bleeding outside */
-        }
-        
-        .feature-card:hover {
-            border-color: #C5A059;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
-            background: #000000;
-        }
-
-        .feature-card:hover .feature-detail {
-            max-height: 120px; /* slightly more room for longer detail text */
-            opacity: 1;
-            margin-top: 12px;
-        }
-        
-        .feature-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            flex-shrink: 0;
-        }
-        
-        .feature-title {
-            font-size: 18px;
-            color: #C5A059;
-            margin-bottom: 10px;
-            font-weight: 600;
-            flex-shrink: 0;
-        }
-        
-        /* FIX 2 continued: feature-text allowed to wrap fully inside card */
-        .feature-text {
-            font-size: 14px;
-            color: #888;
-            line-height: 1.7;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .feature-detail {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
-            border-top: 1px solid transparent;
-            padding-top: 0;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .feature-card:hover .feature-detail {
-            border-top-color: #2a2a2a;
-            padding-top: 12px;
-        }
-        
-        .contact {
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
-            border-top: 1px solid #2a2a2a;
-            position: relative;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent);
-        }
-        
-        .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-bar {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 60px;
-            flex-wrap: wrap;
-            margin-top: 30px;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-label {
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
-        }
-        
-        .contact-value {
-            font-size: 15px;
-            color: #b0b0b0;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-        
-        .contact-value a {
-            color: #C5A059;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-value a:hover {
-            color: #D4AF37;
-        }
-        
-        .legal {
-            background: #0e0e0e;
-            padding: 70px 20px;
-            position: relative;
-            border-top: 1px solid #2a2a2a;
-        }
-
-        .legal::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 10%;
-            right: 10%;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent);
-        }
-        
-        .legal-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .legal .section-title {
-            font-size: 28px;
-            margin-bottom: 40px;
-        }
-        
-        .legal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .legal-section {
-            background: #000000;
-            border: 1px solid #1e1e1e;
-            border-radius: 8px;
-            padding: 28px;
-        }
-        
-        .legal-title {
-            font-size: 15px;
-            color: #C5A059;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        
-        .legal-text {
-            font-size: 14px;
-            color: #777;
-            line-height: 1.7;
-        }
-
-        .legal-text a {
-            color: #999;
-            text-decoration: none;
-            border-bottom: 1px solid #333;
-            transition: color 0.2s, border-color 0.2s;
-        }
-
-        .legal-text a:hover {
-            color: #C5A059;
-            border-color: #C5A059;
-        }
-
-        /* Sectors Grid */
-        .sectors-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-
-        .sector-item {
-            background: rgba(197,160,89,0.04);
-            border: 1px solid rgba(197,160,89,0.1);
-            border-radius: 6px;
-            padding: 10px 8px;
-            text-align: center;
-            font-size: 11px;
-            color: #999;
-            letter-spacing: 0.3px;
-            transition: all 0.3s ease;
-        }
-
-        .sector-item:hover {
-            background: rgba(197,160,89,0.08);
-            border-color: rgba(197,160,89,0.2);
-        }
-
-        .sector-item.active {
-            background: rgba(197,160,89,0.08);
-            border: 1px solid rgba(197,160,89,0.2);
-            color: #C5A059;
-            font-weight: 600;
-        }
-
-        /* FIX 3: Portfolio Model & First Node cards — stack vertically on mobile portrait */
-        .model-cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .ai-stats-grid {
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 20px;
-        }
-
-        .revenue-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            to { transform: rotate(360deg); }
-        }
-
-
-
-
-
-
-
-
-
-        
-        footer {
-            background: #000000;
-            padding: 40px 20px;
-            border-top: 1px solid #2a2a2a;
-            margin-top: auto;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .footer-company {
-            font-size: 16px;
-            color: #C5A059;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        
-        .footer-links {
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: #888;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #C5A059;
-        }
-        
-        .footer-copyright {
-            font-size: 12px;
-            color: #555;
-        }
-
-        .reveal {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.65s ease, transform 0.65s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
+        .hero p { font-size: 18px; color: #b0b0b0; margin-bottom: 44px; line-height: 1.9; max-width: 680px; margin-left: auto; margin-right: auto; }
+        .product { padding: 90px 20px; background: #000000; position: relative; }
+        .product::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent); }
+        .product-content { max-width: 1200px; margin: 0 auto; }
+        .section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 34px; color: #ffffff; text-align: center; margin-bottom: 16px; font-weight: 500; }
+        .section-subtitle { font-size: 14px; color: #888; text-align: center; margin-bottom: 60px; letter-spacing: 1.5px; text-transform: uppercase; }
+        .product-showcase { background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border: 1px solid #2a2a2a; border-radius: 12px; padding: 50px; position: relative; overflow: hidden; }
+        .product-showcase::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #C5A059, #D4AF37); }
+        .product-name { font-family: 'DM Sans', sans-serif; font-size: 28px; color: #C5A059; margin-bottom: 20px; font-weight: 700; letter-spacing: 4px; }
+        .product-description { font-size: 17px; color: #b0b0b0; line-height: 1.9; margin-bottom: 30px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-card { background: #000000; border: 1px solid #2a2a2a; border-radius: 8px; padding: 30px; transition: all 0.3s ease; cursor: default; display: flex; flex-direction: column; overflow: hidden; }
+        .feature-card:hover { border-color: #C5A059; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2); background: #000000; }
+        .feature-card:hover .feature-detail { max-height: 120px; opacity: 1; margin-top: 12px; }
+        .feature-icon { font-size: 40px; margin-bottom: 15px; flex-shrink: 0; }
+        .feature-title { font-size: 18px; color: #C5A059; margin-bottom: 10px; font-weight: 600; flex-shrink: 0; }
+        .feature-text { font-size: 14px; color: #888; line-height: 1.7; word-wrap: break-word; overflow-wrap: break-word; }
+        .feature-detail { font-size: 13px; color: #666; line-height: 1.5; max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease; border-top: 1px solid transparent; padding-top: 0; word-wrap: break-word; overflow-wrap: break-word; }
+        .feature-card:hover .feature-detail { border-top-color: #2a2a2a; padding-top: 12px; }
+        .legal { background: #0e0e0e; padding: 70px 20px; position: relative; border-top: 1px solid #2a2a2a; }
+        .legal::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.1), transparent); }
+        .legal-content { max-width: 1200px; margin: 0 auto; }
+        .legal .section-title { font-size: 28px; margin-bottom: 40px; }
+        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .legal-section { background: #000000; border: 1px solid #1e1e1e; border-radius: 8px; padding: 28px; }
+        .legal-title { font-size: 15px; color: #C5A059; margin-bottom: 12px; font-weight: 600; }
+        .legal-text { font-size: 14px; color: #777; line-height: 1.7; }
+        .legal-text a { color: #999; text-decoration: none; border-bottom: 1px solid #333; transition: color 0.2s, border-color 0.2s; }
+        .legal-text a:hover { color: #C5A059; border-color: #C5A059; }
+        .sectors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .sector-item { background: rgba(197,160,89,0.04); border: 1px solid rgba(197,160,89,0.1); border-radius: 6px; padding: 10px 8px; text-align: center; font-size: 11px; color: #999; letter-spacing: 0.3px; transition: all 0.3s ease; }
+        .sector-item:hover { background: rgba(197,160,89,0.08); border-color: rgba(197,160,89,0.2); }
+        .sector-item.active { background: rgba(197,160,89,0.08); border: 1px solid rgba(197,160,89,0.2); color: #C5A059; font-weight: 600; }
+        .model-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        /* Partner section highlight */
+        .partner-section { background: #0a0a0a; border-top: 1px solid #2a2a2a; border-bottom: 1px solid #2a2a2a; padding: 70px 20px; position: relative; }
+        .partner-section::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.15), transparent); }
+        .partner-badge { display: inline-block; font-size: 11px; color: #C5A059; letter-spacing: 2px; text-transform: uppercase; border: 1px solid rgba(197,160,89,0.3); padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; }
+        .priority-sectors { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+        .priority-tag { background: rgba(197,160,89,0.08); border: 1px solid rgba(197,160,89,0.2); border-radius: 4px; padding: 6px 12px; font-size: 12px; color: #C5A059; }
+        footer { background: #000000; padding: 40px 20px; border-top: 1px solid #2a2a2a; margin-top: auto; }
+        .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer-company { font-size: 16px; color: #C5A059; margin-bottom: 15px; font-weight: 600; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #888; text-decoration: none; margin: 0 15px; font-size: 14px; transition: color 0.3s ease; }
+        .footer-links a:hover { color: #C5A059; }
+        .footer-copyright { font-size: 12px; color: #555; }
+        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .footer-contact { display: flex; justify-content: center; gap: 30px; margin: 15px 0 12px 0; flex-wrap: wrap; }
+        .footer-contact-item { font-size: 12px; color: #777; }
+        .footer-label { color: #888; margin-right: 5px; }
+        .footer-contact-item a { color: #C5A059; text-decoration: none; }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 28px;
-                white-space: normal;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .company-name {
-                font-size: 20px;
-            }
-
-            .header-nav {
-                display: none;
-            }
-            
-            .product-showcase {
-                padding: 30px 20px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .sectors-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-bar {
-                gap: 36px;
-            }
-
-            .sat-close {
-                top: 12px;
-                right: 12px;
-            }
-
-            /* FIX 3: Stack Portfolio Model & First Node cards vertically on portrait mobile */
-            .model-cards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ai-stats-grid {
-                grid-template-columns: 1fr !important;
-            }
-
-            .revenue-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .hero h1 { font-size: 28px; white-space: normal; }
+            .hero p { font-size: 16px; }
+            .company-name { font-size: 20px; }
+            .header-nav { display: none; }
+            .product-showcase { padding: 30px 20px; }
+            .section-title { font-size: 28px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+            .model-cards-grid { grid-template-columns: 1fr; }
+            .priority-sectors { gap: 6px; }
         }
-
-        .footer-contact {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 15px 0 12px 0;
-            flex-wrap: wrap;
-        }
-
-        .footer-contact-item {
-            font-size: 12px;
-            color: #777;
-        }
-
-        .footer-label {
-            color: #888;
-            margin-right: 5px;
-        }
-
-        .footer-contact-item a {
-            color: #C5A059;
-            text-decoration: none;
-        }
-
         @media (max-width: 600px) {
-            .footer-contact {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-            }
+            .footer-contact { flex-direction: column; gap: 8px; text-align: center; }
         }
     </style>
 </head>
@@ -677,54 +136,52 @@
             <div class="logo-section">
                 <div class="logo">E</div>
                 <div>
-                    <div class="company-name">EMOOLA<sup style="font-size:14px;">&reg;</sup> </div>
+                    <div class="company-name">EMOOLA<sup style="font-size:14px;">&reg;</sup></div>
                     <div class="tagline">Financial Data Services &amp; Market Intelligence</div>
                 </div>
             </div>
             <nav class="header-nav">
                 <a href="#product">Product</a>
                 <a href="#model">Model</a>
+                <a href="#partner">Partner</a>
                 <a href="https://emoola.net/privacy.html">Privacy</a>
                 <a href="/portal.html">Partner Access</a>
             </nav>
         </div>
     </header>
-    
+
     <section class="hero reveal">
         <div class="hero-content">
             <h1>Building the Future of Financial Data</h1>
             <div class="hero-oneliner">Market data and financial intelligence for institutional clients across petroleum, energy, and commodity markets</div>
-            <p>We are building a network of specialist financial data companies across 20 sectors of the global market. To find out more about the opportunity, contact <a href="mailto:info@emoola.net" style="color:#C5A059;">info@emoola.net</a></p>
-            </span>
+            <p>We are building a network of specialist financial data companies across 20 sectors of the global market. Further information is available on request &mdash; contact <a href="mailto:info@emoola.net" style="color:#C5A059;">info@emoola.net</a></p>
         </div>
     </section>
-    
+
     <section class="product reveal" id="product" style="scroll-margin-top: 90px;">
         <div class="product-content">
             <h2 class="section-title">Our Flagship Product</h2>
-            <p class="section-subtitle">Innovation in Financial Data &amp; Market Intelligence</p>
-            
+            <p class="section-subtitle">In Development &mdash; Financial Data &amp; Market Intelligence</p>
+
             <div class="product-showcase">
                 <div class="product-name">EMOOLA PLATFORM</div>
                 <p class="product-description">
-                    A data platform delivering market intelligence across petroleum, energy, and commodity 
-                    markets. Built on AI-accelerated infrastructure designed to serve 20 specialist sectors 
-                    through a franchise network of expert-led companies.
+                    A data platform in development, designed to deliver market intelligence across petroleum, energy, and commodity markets. The architecture is planned around AI-accelerated infrastructure intended to serve 20 specialist sectors through a network of expert-led companies.
                 </p>
-                
+
                 <div class="feature-grid">
                     <div class="feature-card">
                         <div class="feature-icon">&#x1F4CA;</div>
                         <div class="feature-title">Market Data</div>
-                        <div class="feature-text">Real-time data visualisation and analysis infrastructure for petroleum, energy, and commodity markets</div>
-                        <div class="feature-detail">Multi-asset class coverage with institutional-grade data feeds and configurable alerting for portfolio monitoring across commodity and energy sectors.</div>
+                        <div class="feature-text">Designed to provide real-time data visualisation and analysis for petroleum, energy, and commodity markets</div>
+                        <div class="feature-detail">Planned to include multi-asset class coverage with institutional-grade data feeds and configurable alerting across commodity and energy sectors.</div>
                     </div>
-                    
+
                     <div class="feature-card">
                         <div class="feature-icon">&#x1F510;</div>
                         <div class="feature-title">Secure Infrastructure</div>
-                        <div class="feature-text">Bank-grade encryption and data custody protocols</div>
-                        <div class="feature-detail">End-to-end encryption with institutional key management and compliant data handling procedures.</div>
+                        <div class="feature-text">Architecture designed around institutional-grade encryption and data custody standards</div>
+                        <div class="feature-detail">Planned to incorporate end-to-end encryption, institutional key management, and compliant data handling procedures, in line with financial-data-services standards.</div>
                     </div>
                 </div>
             </div>
@@ -741,12 +198,11 @@
                 <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
                     <div class="legal-title">The Opportunity</div>
                     <div class="legal-text" style="line-height: 1.8;">
-                        The global financial data market exceeds £250 billion annually. It is dominated 
-                        by a small number of established providers who charge £10,000 to £45,000+ per 
-                        user per year. Most of the market is priced out. EMOOLA is building an alternative 
-                        &mdash; a network of 20 specialist companies, each run by an industry expert, 
-                        powered by AI. Contact <a href="mailto:info@emoola.net">info@emoola.net</a> for 
-                        the full investor Q&amp;A.
+                        The global financial data market is estimated in the hundreds of billions (USD) annually. It is dominated
+                        by a small number of established providers who charge $12,000 to $27,000+ per
+                        user per year. Most of the market is priced out. EMOOLA is building an alternative
+                        &mdash; a network of 20 specialist companies, each run by an industry expert,
+                        built on AI-accelerated infrastructure (in development). Further information is available on request via <a href="mailto:info@emoola.net">info@emoola.net</a>.
                     </div>
                 </div>
             </div>
@@ -779,68 +235,112 @@
                 </div>
             </div>
 
-            <!-- FIX 3: Using .model-cards-grid class instead of inline grid-template-columns -->
             <div style="max-width: 900px; margin: 30px auto 0;">
                 <div class="model-cards-grid" style="grid-template-columns: 1fr;">
-
                     <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
                         <div class="legal-title">First Node</div>
                         <div class="legal-text" style="line-height: 1.8;">
-                            EMOOLA's initial node covers Commodity &amp; Energy Pricing &mdash; specifically 
-                            petroleum and energy market data. This sector aligns directly with our existing 
-                            corporate infrastructure, investor relationships, and this sector aligns directly with our existing corporate infrastructure and investor relationships in international commodity markets.
+                            EMOOLA's initial node covers Commodity &amp; Energy Pricing &mdash; specifically
+                            petroleum and energy market data. This sector aligns directly with our existing
+                            corporate infrastructure and investor relationships in international commodity markets.
                         </div>
                     </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- The Model + Partner Opportunity -->
-            <div style="max-width: 900px; margin: 40px auto 0;">
-                <div class="model-cards-grid" style="grid-template-columns: 1fr;">
-
                 </div>
             </div>
 
         </div>
     </section>
-    
+
+    <!-- Partner / Director Section -->
+    <section class="partner-section reveal" id="partner">
+        <div class="legal-content">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <span class="partner-badge">For Sector Specialists</span>
+                    <h2 class="section-title" style="margin-top: 16px;">Lead a Sector &mdash; Partner Opportunity</h2>
+                    <p class="section-subtitle">Principal ownership. Your sector. Your clients.</p>
+                </div>
+
+                <div class="legal-grid" style="grid-template-columns: 1fr; gap: 24px;">
+
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">The Network Model</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            EMOOLA operates as a network: each data sector is structured as its own independent company &mdash; a &ldquo;node&rdquo; &mdash; led by a sector-expert director who holds 51% ownership of that node. EMOOLA provides the platform, brand licence, compliance framework, and central support. The director is the principal of their own sector business within the network, not an employee.
+                        </div>
+                    </div>
+
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">Who We Are Looking For</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            We are seeking senior professionals from the financial-data-services world who bring genuine sector expertise and genuine client relationships &mdash; people whose existing customers would realistically follow them to a better-priced specialist data offering. This is a principal-level ownership opportunity in an early-stage venture, for someone who believes in the model and brings their own market. It is not a salaried post.
+                        </div>
+                    </div>
+
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">Priority Sectors</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            We are currently prioritising the following sectors for first-wave node formation:
+                        </div>
+                        <div class="priority-sectors">
+                            <span class="priority-tag">Commodity &amp; Energy</span>
+                            <span class="priority-tag">ESG &amp; Sustainability</span>
+                            <span class="priority-tag">Risk &amp; Compliance</span>
+                            <span class="priority-tag">Trade Finance</span>
+                            <span class="priority-tag">Payments Data &amp; Analytics</span>
+                        </div>
+                        <div class="legal-text" style="line-height: 1.8; margin-top: 12px;">
+                            A strong generalist who would take one sector and help develop adjacent ones is also of interest.
+                        </div>
+                    </div>
+
+                    <div class="legal-section" style="background: linear-gradient(135deg, #1a1a1a 0%, #151515 100%); border-color: #2a2a2a;">
+                        <div class="legal-title">How to Express Interest</div>
+                        <div class="legal-text" style="line-height: 1.8;">
+                            Initial interest can be expressed on a non-binding, in-principle basis. No formal commitment is required at this stage &mdash; formal engagement follows once the structure is confirmed and mutual fit is established. If you lead or have led a financial-data business and want to discuss a sector partnership, contact <a href="mailto:info@emoola.net">info@emoola.net</a>.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Corporate Information -->
     <section class="legal reveal">
         <div class="legal-content">
             <h2 class="section-title">Corporate Information</h2>
-            
+
             <div class="legal-grid">
                 <div class="legal-section">
                     <div class="legal-title">Company Registration</div>
                     <div class="legal-text">
-                        EMOOLA LTD is incorporated in England &amp; Wales as a financial data services and technology company, 
+                        EMOOLA LTD is incorporated in England &amp; Wales as a financial data services and technology company,
                         developing market intelligence solutions for institutional clients.
                         Verify via <a href="https://data.companieshouse.gov.uk/doc/company/09594521" target="_blank" rel="noopener noreferrer">Companies House</a>.
                     </div>
                 </div>
-                
+
                 <div class="legal-section">
                     <div class="legal-title">Technology</div>
                     <div class="legal-text">
-                        AI-accelerated data platform serving 20 specialist sectors 
-                        from one central infrastructure. Secure architecture with 
-                        institutional-grade data handling.
+                        AI-accelerated data platform (in development), designed to serve 20 specialist sectors
+                        from one central infrastructure. Architecture planned around institutional-grade
+                        data handling and secure design principles.
                     </div>
                 </div>
-                
+
                 <div class="legal-section">
                     <div class="legal-title">Development Status</div>
                     <div class="legal-text">
-                        Platform in development. Investor Q&amp;A and supporting 
-                        documentation available on request via 
+                        Platform in development. Further information is available on request via
                         <a href="mailto:info@emoola.net">info@emoola.net</a>.
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="footer-content">
             <div class="footer-company">EMOOLA LTD</div>
@@ -854,20 +354,17 @@
                     <span>Aston House, Newcastle Upon Tyne, NE5 1NB, United Kingdom</span>
                 </div>
             </div>
-            
             <div class="footer-links">
                 <a href="https://emoola.net/privacy.html">Privacy Policy</a>
                 <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#101;&#109;&#111;&#111;&#108;&#97;&#46;&#110;&#101;&#116;">Contact</a>
             </div>
-            <div class="footer-copyright">&copy; 2015–2026 EMOOLA LTD. All Rights Reserved. Registered in England &amp; Wales.</div>
+            <div class="footer-copyright">&copy; 2015&ndash;2026 EMOOLA LTD. All Rights Reserved. Registered in England &amp; Wales.</div>
         </div>
     </footer>
-
 
     <script>
     (function() {
         'use strict';
-
         var els = document.querySelectorAll('.reveal');
         var obs = new IntersectionObserver(function(entries) {
             entries.forEach(function(e) {
@@ -875,18 +372,7 @@
             });
         }, { threshold: 0.08 });
         els.forEach(function(el) { obs.observe(el); });
-
-        var overlay = document.getElementById('satOverlay');
-        var trigger = document.getElementById('satTrigger');
-        var closeBtn = document.getElementById('satClose');
-        var frame = document.getElementById('satFrame');
-        var appUrl = 'https://emoola.vercel.app/';
-        var isOpen = false;
-
-
     })();
     </script>
 </body>
 </html>
-
-<!-- redeploy -->
